@@ -97,11 +97,11 @@ export const contactInfo = {
   areas: ["Glenelg", "Brighton", "Marion", "Plympton", "Somerton Park", "Holdfast Bay"]
 };
 
-// Sample 1-hour driving route in Plympton/Marion/Glenelg area
+// Sample 1-hour circular driving route in Plympton/Marion/Glenelg area
 export const drivingRoute = {
   name: "Southern Adelaide Mastery Route",
   duration: "60 minutes",
-  distance: "18 km",
+  distance: "22 km",
   description: "Master the most common test routes and challenging intersections",
   waypoints: [
     {
@@ -114,8 +114,8 @@ export const drivingRoute = {
     },
     {
       id: 2,
-      name: "Marion Road Practice",
-      coords: [-34.9702, 138.5561],
+      name: "Marion Road South",
+      coords: [-34.9750, 138.5561],
       type: "waypoint",
       description: "Main road driving",
       skills: ["Lane changes", "Traffic flow", "Speed limits"]
@@ -130,20 +130,72 @@ export const drivingRoute = {
     },
     {
       id: 4,
-      name: "Diagonal Road",
-      coords: [-34.9823, 138.5369],
+      name: "Brighton Road",
+      coords: [-34.9920, 138.5250],
       type: "waypoint",
-      description: "Multi-lane driving",
-      skills: ["Merging", "Right turns", "Traffic lights"]
+      description: "Coastal road driving",
+      skills: ["Merging", "Speed zones", "Pedestrians"]
     },
     {
       id: 5,
-      name: "Finish: Glenelg Beach",
+      name: "Glenelg Beach",
       coords: [-34.9817, 138.5150],
+      type: "waypoint",
+      description: "Beachside practice",
+      skills: ["Parallel parking", "U-turns", "Observation"]
+    },
+    {
+      id: 6,
+      name: "Anzac Highway",
+      coords: [-34.9600, 138.5300],
+      type: "waypoint",
+      description: "Multi-lane highway",
+      skills: ["Highway merging", "Lane discipline", "Speed"]
+    },
+    {
+      id: 7,
+      name: "Return: Plympton",
+      coords: [-34.9558, 138.5536],
       type: "end",
-      description: "Beachside finish",
-      skills: ["Parallel parking", "Observation", "Final checks"]
+      description: "Complete the loop",
+      skills: ["Final maneuvers", "Confidence check", "Debrief"]
     }
+  ],
+  // Detailed route path following actual roads (for realistic Uber-like display)
+  routePath: [
+    // Start at Plympton
+    [-34.9558, 138.5536],
+    // Head south on Marion Road
+    [-34.9580, 138.5540],
+    [-34.9620, 138.5550],
+    [-34.9680, 138.5558],
+    [-34.9750, 138.5561],
+    // Continue to Westfield Marion
+    [-34.9800, 138.5561],
+    [-34.9850, 138.5561],
+    [-34.9889, 138.5561],
+    // Turn west on Sturt Road toward Brighton
+    [-34.9889, 138.5500],
+    [-34.9900, 138.5400],
+    [-34.9920, 138.5300],
+    [-34.9920, 138.5250],
+    // Head north on Brighton Road to Glenelg
+    [-34.9880, 138.5200],
+    [-34.9850, 138.5170],
+    [-34.9817, 138.5150],
+    // Along Glenelg esplanade
+    [-34.9780, 138.5140],
+    [-34.9740, 138.5145],
+    // Turn onto Anzac Highway heading east
+    [-34.9700, 138.5180],
+    [-34.9650, 138.5240],
+    [-34.9600, 138.5300],
+    // Continue on Anzac Highway
+    [-34.9580, 138.5380],
+    [-34.9570, 138.5450],
+    // Return to Plympton
+    [-34.9560, 138.5500],
+    [-34.9558, 138.5536]
   ],
   highlights: [
     "Practice actual VORT test routes",
