@@ -1,4 +1,4 @@
-/* Adelaide ma Driving School - Bright Professional Styles */
+/* Adelaide ma Driving School - Premium Orange Theme */
 
 html {
   scroll-behavior: smooth;
@@ -7,17 +7,29 @@ html {
 .App {
   min-height: 100vh;
   overflow-x: hidden;
+  background: #FFFAF5;
 }
 
-/* Custom animations */
+/* Premium animations */
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(24px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
@@ -26,17 +38,26 @@ html {
   50% { transform: translateY(-8px); }
 }
 
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
 .animate-fade-in-up {
-  animation: fadeInUp 0.6s ease-out forwards;
+  animation: fadeInUp 0.7s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.5s ease-out forwards;
 }
 
 .animate-float {
-  animation: float 3s ease-in-out infinite;
+  animation: float 4s ease-in-out infinite;
 }
 
-/* Smooth transitions */
+/* Premium transitions */
 button, a, input, select, textarea {
-  transition: all 0.2s ease;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Focus states */
@@ -45,30 +66,41 @@ a:focus-visible,
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
-  outline: 2px solid #0EA5E9;
+  outline: 2px solid #F97316;
   outline-offset: 2px;
 }
 
 /* Selection */
 ::selection {
-  background-color: #0EA5E9;
+  background-color: #F97316;
   color: white;
 }
 
-/* Scrollbar */
+/* Premium scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #F1F5F9;
+  background: #FFF7ED;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #CBD5E1;
-  border-radius: 4px;
+  background: #FDBA74;
+  border-radius: 5px;
+  border: 2px solid #FFF7ED;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #94A3B8;
+  background: #FB923C;
+}
+
+/* Premium card hover */
+.premium-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.premium-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -12px rgba(249, 115, 22, 0.15);
 }
