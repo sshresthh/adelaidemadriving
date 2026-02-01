@@ -13,11 +13,11 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center bg-stone-900 overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center bg-gradient-to-br from-[#fff8ef] via-[#fff2d6] to-[#ffe7b8] overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
         <div
-          className="absolute inset-0 opacity-25"
+          className="absolute inset-0 opacity-28"
           style={{
             backgroundImage: `url('https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=1920&q=80')`,
             backgroundSize: 'cover',
@@ -25,12 +25,12 @@ const Hero = () => {
           }}
         />
         {/* Warm overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-stone-900/95 via-stone-900/90 to-orange-950/80" />
+        <div className="absolute inset-0 bg-gradient-to-br from-white/70 via-white/55 to-white/40" />
       </div>
 
       {/* Decorative elements */}
-      <div className="absolute top-1/4 right-0 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-orange-600/5 rounded-full blur-3xl" />
+      <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-[520px] h-[520px] bg-accent/25 rounded-full blur-3xl" />
 
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-40">
@@ -38,26 +38,26 @@ const Hero = () => {
           {/* Left - Text */}
           <div>
             {/* Badge */}
-            <div className="inline-flex items-center gap-3 px-4 py-2 bg-orange-500/20 backdrop-blur-sm rounded-full mb-8">
+            <div className="inline-flex items-center gap-3 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full mb-8 border border-white">
               <div className="flex items-center">
                 {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-4 h-4 text-orange-400 fill-orange-400" viewBox="0 0 24 24">
+                  <svg key={i} className="w-4 h-4 text-primary fill-primary" viewBox="0 0 24 24">
                     <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
                   </svg>
                 ))}
               </div>
-              <span className="text-white/90 text-sm font-medium">500+ Happy Students</span>
+              <span className="text-foreground text-sm font-medium">500+ Happy Students</span>
             </div>
 
             {/* Headline */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-6 leading-[1.1]">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-foreground mb-6 leading-[1.1]">
               Learn to Drive
               <br />
-              <span className="text-orange-400">With Confidence</span>
+              <span className="text-primary">With Confidence</span>
             </h1>
 
             {/* Subheadline */}
-            <p className="text-lg text-stone-300 mb-10 leading-relaxed max-w-lg">
+            <p className="text-lg text-muted-foreground mb-10 leading-relaxed max-w-lg">
               Adelaide's most trusted driving school in Southern Adelaide. 
               Expert instruction in Glenelg, Marion & Plympton with a 95% first-time pass rate.
             </p>
@@ -67,7 +67,7 @@ const Hero = () => {
               <Button
                 onClick={() => scrollToSection('contact')}
                 size="lg"
-                className="group bg-orange-500 hover:bg-orange-600 text-white px-8 py-6 text-base font-semibold rounded-full shadow-xl shadow-orange-500/30 hover:shadow-orange-500/50 hover:-translate-y-1 transition-all"
+                className="group bg-primary hover:bg-[#ec5f43] text-white px-8 py-6 text-base font-semibold rounded-full shadow-[0_20px_40px_-22px_rgba(242,107,79,0.5)] hover:shadow-[0_24px_50px_-24px_rgba(242,107,79,0.65)] hover:-translate-y-1 transition-all"
               >
                 Book Your First Lesson
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -76,7 +76,7 @@ const Hero = () => {
                 onClick={() => scrollToSection('pricing')}
                 variant="outline"
                 size="lg"
-                className="border-2 border-white/20 bg-white/5 text-white hover:bg-white/10 px-8 py-6 text-base font-semibold backdrop-blur-sm rounded-full transition-all"
+                className="border-2 border-primary/20 bg-white/70 text-foreground hover:bg-white px-8 py-6 text-base font-semibold backdrop-blur-sm rounded-full transition-all"
               >
                 View Pricing
               </Button>
@@ -89,13 +89,13 @@ const Hero = () => {
                 { icon: '✓', label: '10+ Years', sublabel: 'Experience' },
                 { icon: '✓', label: 'Pick-up', sublabel: 'Included' }
               ].map((item, index) => (
-                <div key={index} className="flex items-center gap-3 px-4 py-2 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
-                  <div className="w-8 h-8 bg-emerald-500/20 rounded-lg flex items-center justify-center">
-                    <span className="text-emerald-400 font-bold text-sm">{item.icon}</span>
+                <div key={index} className="flex items-center gap-3 px-4 py-2 bg-white/70 backdrop-blur-sm rounded-xl border border-white">
+                  <div className="w-8 h-8 bg-accent/35 rounded-lg flex items-center justify-center">
+                    <span className="text-foreground font-bold text-sm">{item.icon}</span>
                   </div>
                   <div>
-                    <div className="text-white text-sm font-semibold">{item.label}</div>
-                    <div className="text-stone-400 text-xs">{item.sublabel}</div>
+                    <div className="text-foreground text-sm font-semibold">{item.label}</div>
+                    <div className="text-muted-foreground text-xs">{item.sublabel}</div>
                   </div>
                 </div>
               ))}
@@ -104,23 +104,23 @@ const Hero = () => {
 
           {/* Right - Stats Card */}
           <div className="hidden lg:block">
-            <div className="bg-white rounded-3xl p-8 shadow-2xl shadow-black/20">
+            <div className="bg-white rounded-3xl p-8 shadow-2xl shadow-black/10 border border-border">
               <div className="text-center mb-8">
-                <h3 className="text-xl font-bold text-stone-800">Why Students Choose Us</h3>
-                <p className="text-stone-500 text-sm mt-1">Numbers that speak for themselves</p>
+                <h3 className="text-xl font-bold text-foreground">Why Students Choose Us</h3>
+                <p className="text-muted-foreground text-sm mt-1">Numbers that speak for themselves</p>
               </div>
               <div className="grid grid-cols-2 gap-4">
                 {stats.map((stat, index) => (
-                  <div key={index} className="text-center p-5 bg-orange-50 rounded-2xl border border-orange-100">
-                    <div className="text-3xl font-extrabold text-orange-500 mb-1">{stat.value}</div>
-                    <div className="text-sm font-semibold text-stone-800">{stat.label}</div>
-                    <div className="text-xs text-stone-500 mt-1">{stat.description}</div>
+                  <div key={index} className="text-center p-5 bg-secondary rounded-2xl border border-border">
+                    <div className="text-3xl font-extrabold text-primary mb-1">{stat.value}</div>
+                    <div className="text-sm font-semibold text-foreground">{stat.label}</div>
+                    <div className="text-xs text-muted-foreground mt-1">{stat.description}</div>
                   </div>
                 ))}
               </div>
               <Button
                 onClick={() => scrollToSection('contact')}
-                className="w-full mt-6 bg-stone-900 hover:bg-stone-800 text-white py-5 font-semibold rounded-xl"
+                className="w-full mt-6 bg-primary hover:bg-[#ec5f43] text-white py-5 font-semibold rounded-xl"
               >
                 Start Your Journey Today
               </Button>
@@ -132,7 +132,7 @@ const Hero = () => {
       {/* Scroll indicator */}
       <button
         onClick={() => scrollToSection('about')}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/40 hover:text-white transition-colors"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-foreground/50 hover:text-foreground transition-colors"
       >
         <div className="flex flex-col items-center gap-2">
           <span className="text-xs uppercase tracking-widest font-medium">Explore</span>

@@ -38,18 +38,18 @@ const WhyUs = () => {
   ];
 
   return (
-    <section id="why-us" className="py-24 md:py-32 bg-white">
+    <section id="why-us" className="py-24 md:py-32 bg-background">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="inline-flex items-center gap-2 px-4 py-2 bg-orange-100 rounded-full mb-6">
-            <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
-            <span className="text-orange-700 text-sm font-semibold">Why Choose Us</span>
+          <span className="inline-flex items-center gap-2 px-4 py-2 bg-secondary rounded-full mb-6">
+            <span className="w-2 h-2 bg-primary rounded-full"></span>
+            <span className="text-primary text-sm font-semibold">Why Choose Us</span>
           </span>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-stone-800 mb-4">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mb-4">
             The Adelaide ma Difference
           </h2>
-          <p className="text-lg text-stone-600">
+          <p className="text-lg text-muted-foreground">
             What sets us apart from other driving schools.
           </p>
         </div>
@@ -59,23 +59,23 @@ const WhyUs = () => {
           {whyUsFeatures.map((feature, index) => (
             <div
               key={feature.id}
-              className="bg-white rounded-2xl p-6 border border-stone-200 hover:border-orange-300 hover:shadow-xl transition-all duration-300 premium-hover group"
+              className="bg-white rounded-2xl p-6 border border-border hover:border-primary/30 hover:shadow-xl transition-all duration-300 premium-hover group"
             >
               <div className="flex items-center justify-between mb-5">
-                <div className="p-3 bg-orange-100 rounded-xl text-orange-600 group-hover:bg-orange-500 group-hover:text-white transition-colors">
+                <div className="p-3 bg-primary/10 rounded-xl text-primary group-hover:bg-primary group-hover:text-white transition-colors">
                   {featureIcons[index]}
                 </div>
                 <div className="text-right">
-                  <span className="text-2xl font-extrabold text-orange-500">{feature.stat}</span>
-                  <span className="text-stone-400 text-xs ml-1">{feature.statLabel}</span>
+                  <span className="text-2xl font-extrabold text-primary">{feature.stat}</span>
+                  <span className="text-muted-foreground text-xs ml-1">{feature.statLabel}</span>
                 </div>
               </div>
 
-              <h3 className="font-bold text-stone-800 mb-2">{feature.title}</h3>
-              <p className="text-stone-500 text-sm leading-relaxed mb-3">
+              <h3 className="font-bold text-foreground mb-2">{feature.title}</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed mb-3">
                 {feature.description}
               </p>
-              <p className="text-stone-400 text-xs italic">
+              <p className="text-muted-foreground text-xs italic opacity-80">
                 {feature.details}
               </p>
             </div>
@@ -83,10 +83,10 @@ const WhyUs = () => {
         </div>
 
         {/* Stats banner */}
-        <div className="bg-orange-500 rounded-3xl p-8 md:p-12 shadow-xl shadow-orange-500/20">
+        <div className="bg-primary rounded-3xl p-8 md:p-12 shadow-[0_20px_45px_-22px_rgba(242,107,79,0.45)]">
           <div className="text-center mb-8">
             <h3 className="text-2xl font-bold text-white mb-2">Our Track Record</h3>
-            <p className="text-orange-100">Numbers that speak for themselves</p>
+            <p className="text-white/90">Numbers that speak for themselves</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {stats.map((stat, index) => (
@@ -94,8 +94,8 @@ const WhyUs = () => {
                 <div className="text-3xl md:text-4xl font-extrabold text-white mb-1">
                   {stat.value}
                 </div>
-                <div className="text-orange-100 text-sm font-medium">{stat.label}</div>
-                <div className="text-orange-200/70 text-xs mt-1">{stat.description}</div>
+                <div className="text-white/90 text-sm font-medium">{stat.label}</div>
+                <div className="text-white/70 text-xs mt-1">{stat.description}</div>
               </div>
             ))}
           </div>

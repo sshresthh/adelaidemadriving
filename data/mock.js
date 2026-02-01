@@ -18,16 +18,10 @@ export const siteInfo = {
 };
 
 export const instructor = {
-  name: "Michael Anderson",
-  title: "Head Driving Instructor",
+  name: "Mr. Chhabilal Lamichhane",
+  title: "Main Driving Instructor",
   image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop",
-  bio: "G'day! I'm Michael, your local Adelaide driving instructor with over 10 years of experience helping nervous beginners become confident, safe drivers. Born and raised in Adelaide, I know every street, roundabout, and test route in Southern Adelaide.",
-  qualifications: [
-    "SA Government Accredited Instructor",
-    "Certificate IV in Transport & Logistics",
-    "First Aid Certified",
-    "Working with Children Check"
-  ],
+  bio: "Mr. Chhabilal Lamichhane is the main driving instructor at Adelaide MaDriving, known for calm, practical coaching that builds real confidence on the road.",
   specialties: [
     "Nervous & anxious learners",
     "Test preparation specialist",
@@ -43,7 +37,7 @@ export const testimonials = [
     age: 18,
     location: "Glenelg",
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop",
-    quote: "I was so nervous about learning to drive, but Michael made me feel completely at ease from day one. His patient teaching style and local knowledge helped me pass my test on the first attempt!",
+    quote: "I was so nervous about learning to drive, but Mr. Lamichhane made me feel completely at ease from day one. His patient teaching style and local knowledge helped me pass my test on the first attempt!",
     rating: 5,
     passedOn: "First attempt",
     date: "December 2025"
@@ -54,7 +48,7 @@ export const testimonials = [
     age: 22,
     location: "Brighton",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop",
-    quote: "After failing my test twice with another instructor, I switched to Adelaide ma Driving. Michael identified my weak points immediately and within 5 lessons I passed with flying colours!",
+    quote: "After failing my test twice with another instructor, I switched to Adelaide ma Driving. Mr. Lamichhane identified my weak points immediately and within 5 lessons I passed with flying colours!",
     rating: 5,
     passedOn: "First attempt with us",
     date: "November 2025"
@@ -65,7 +59,7 @@ export const testimonials = [
     age: 17,
     location: "Somerton Park",
     image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop",
-    quote: "The test package was worth every dollar. We practiced the exact test routes, and Michael taught me all the tricky spots around Marion. I felt so prepared on test day - passed with zero faults!",
+    quote: "The test package was worth every dollar. We practiced the exact test routes, and Mr. Lamichhane taught me all the tricky spots around Marion. I felt so prepared on test day - passed with zero faults!",
     rating: 5,
     passedOn: "First attempt",
     date: "October 2025"
@@ -76,7 +70,7 @@ export const testimonials = [
     age: 35,
     location: "Plympton",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop",
-    quote: "As an adult learner, I was embarrassed to be learning at 35. Michael was incredibly understanding and professional. No judgement, just quality instruction. Highly recommend!",
+    quote: "As an adult learner, I was embarrassed to be learning at 35. Mr. Lamichhane was incredibly understanding and professional. No judgement, just quality instruction. Highly recommend!",
     rating: 5,
     passedOn: "First attempt",
     date: "September 2025"

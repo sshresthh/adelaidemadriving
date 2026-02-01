@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
-import { Outfit } from "next/font/google";
+import { Fraunces, Spline_Sans } from "next/font/google";
 import "./globals.css";
 
-const outfit = Outfit({
+const fraunces = Fraunces({
   subsets: ["latin"],
-  variable: "--font-outfit",
+  variable: "--font-fraunces",
+});
+
+const splineSans = Spline_Sans({
+  subsets: ["latin"],
+  variable: "--font-spline-sans",
 });
 
 export const metadata: Metadata = {
@@ -20,7 +25,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${outfit.variable} antialiased`}>{children}</body>
+      <body className={`${fraunces.variable} ${splineSans.variable} antialiased`}>
+        {children}
+      </body>
     </html>
   );
 }

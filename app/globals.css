@@ -1,26 +1,26 @@
 @import "tailwindcss";
 
 :root {
-  --background: 30 100% 99%;
-  --foreground: 20 14% 10%;
+  --background: 34.7 100% 96.3%;
+  --foreground: 20 21.1% 13.9%;
   --card: 0 0% 100%;
-  --card-foreground: 20 14% 10%;
+  --card-foreground: 20 21.1% 13.9%;
   --popover: 0 0% 100%;
-  --popover-foreground: 20 14% 10%;
-  --primary: 24 95% 53%;
+  --popover-foreground: 20 21.1% 13.9%;
+  --primary: 10.3 86.2% 62.9%;
   --primary-foreground: 0 0% 100%;
-  --secondary: 30 30% 96%;
-  --secondary-foreground: 20 14% 10%;
-  --muted: 30 30% 96%;
-  --muted-foreground: 20 10% 45%;
-  --accent: 24 95% 53%;
-  --accent-foreground: 0 0% 100%;
+  --secondary: 30.7 100% 91.2%;
+  --secondary-foreground: 20 21.1% 13.9%;
+  --muted: 30 65.2% 91%;
+  --muted-foreground: 22.5 17.4% 36.1%;
+  --accent: 47.1 88.5% 69.2%;
+  --accent-foreground: 20 21.1% 13.9%;
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 98%;
-  --border: 24 20% 90%;
-  --input: 24 20% 90%;
-  --ring: 24 95% 53%;
-  --radius: 0.75rem;
+  --border: 30 46.7% 82.4%;
+  --input: 30 46.7% 82.4%;
+  --ring: 10.3 86.2% 62.9%;
+  --radius: 0.9rem;
 }
 
 @theme {
@@ -56,9 +56,28 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: var(--font-outfit), -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: var(--font-spline-sans), -apple-system, BlinkMacSystemFont, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-image:
+      radial-gradient(1000px 500px at 10% -10%, rgba(242, 107, 79, 0.14), transparent 60%),
+      radial-gradient(900px 520px at 90% 0%, rgba(244, 180, 95, 0.2), transparent 55%);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-fraunces), serif;
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-fraunces), serif;
   }
 }
 
@@ -131,13 +150,13 @@ a:focus-visible,
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
-  outline: 2px solid #f97316;
+  outline: 2px solid #f26b4f;
   outline-offset: 2px;
 }
 
 /* Selection */
 ::selection {
-  background-color: #f97316;
+  background-color: #f26b4f;
   color: white;
 }
 
@@ -147,17 +166,17 @@ textarea:focus-visible {
 }
 
 ::-webkit-scrollbar-track {
-  background: #fff7ed;
+  background: #ffedd8;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #fdba74;
+  background: #e2c3a6;
   border-radius: 5px;
-  border: 2px solid #fff7ed;
+  border: 2px solid #ffedd8;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #fb923c;
+  background: #d6b191;
 }
 
 /* Premium card hover */
@@ -167,5 +186,5 @@ textarea:focus-visible {
 
 .premium-hover:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 40px -12px rgba(249, 115, 22, 0.15);
+  box-shadow: 0 20px 40px -12px rgba(242, 107, 79, 0.25);
 }
