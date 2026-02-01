@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from './ui/button';
 import { Menu, X, Car, Phone } from 'lucide-react';
+import { siteInfo } from '../data/mock';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -27,14 +28,13 @@ const Header = () => {
     { label: 'Services', id: 'services' },
     { label: 'Why Us', id: 'why-us' },
     { label: 'Pricing', id: 'pricing' },
+    { label: 'FAQ', id: 'faq' },
   ];
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-white shadow-sm py-3'
-          : 'bg-transparent py-5'
+        isScrolled ? 'bg-white shadow-md py-3' : 'bg-white/95 backdrop-blur-sm py-4'
       }`}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -44,17 +44,14 @@ const Header = () => {
             className="flex items-center gap-3 cursor-pointer" 
             onClick={() => scrollToSection('hero')}
           >
-            <div className={`p-2 rounded-lg transition-all duration-300 ${
-              isScrolled ? 'bg-stone-900' : 'bg-white/10 backdrop-blur-sm'
-            }`}>
+            <div className="p-2 bg-sky-500 rounded-lg">
               <Car className="w-5 h-5 text-white" />
             </div>
-            <div>
-              <span className={`text-lg font-bold tracking-tight transition-colors duration-300 ${
-                isScrolled ? 'text-stone-900' : 'text-white'
-              }`}>
-                Adelaide<span className="text-[#D97756]">ma</span> Driving
+            <div className="flex flex-col">
+              <span className="text-lg font-bold text-slate-800 leading-tight">
+                Adelaide ma Driving
               </span>
+              <span className="text-xs text-sky-600 font-medium -mt-0.5">School</span>
             </div>
           </div>
 
@@ -64,11 +61,7 @@ const Header = () => {
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
-                  isScrolled 
-                    ? 'text-stone-600 hover:text-stone-900 hover:bg-stone-100' 
-                    : 'text-white/80 hover:text-white hover:bg-white/10'
-                }`}
+                className="px-4 py-2 text-sm font-medium text-slate-600 hover:text-sky-600 rounded-lg hover:bg-sky-50 transition-all"
               >
                 {link.label}
               </button>
@@ -78,17 +71,15 @@ const Header = () => {
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center gap-4">
             <a 
-              href="tel:0412345678" 
-              className={`flex items-center gap-2 text-sm font-medium transition-all ${
-                isScrolled ? 'text-stone-600 hover:text-stone-900' : 'text-white/80 hover:text-white'
-              }`}
+              href={`tel:${siteInfo.phone.replace(/\s/g, '')}`}
+              className="flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-sky-600"
             >
               <Phone className="w-4 h-4" />
-              <span>0412 345 678</span>
+              <span>{siteInfo.phone}</span>
             </a>
             <Button
               onClick={() => scrollToSection('contact')}
-              className="bg-[#D97756] hover:bg-[#C4684A] text-white px-5 py-2 text-sm font-medium border-0"
+              className="bg-sky-500 hover:bg-sky-600 text-white px-5 py-2 text-sm font-semibold"
             >
               Book Now
             </Button>
@@ -96,45 +87,41 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2"
+            className="lg:hidden p-2 text-slate-700"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            {isMobileMenuOpen ? (
-              <X className={`w-6 h-6 ${isScrolled ? 'text-stone-800' : 'text-white'}`} />
-            ) : (
-              <Menu className={`w-6 h-6 ${isScrolled ? 'text-stone-800' : 'text-white'}`} />
-            )}
+            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
         {/* Mobile Menu */}
         <div className={`lg:hidden overflow-hidden transition-all duration-300 ${
-          isMobileMenuOpen ? 'max-h-96 opacity-100 mt-4' : 'max-h-0 opacity-0'
+          isMobileMenuOpen ? 'max-h-[500px] opacity-100 mt-4' : 'max-h-0 opacity-0'
         }`}>
-          <div className="bg-white rounded-xl shadow-lg p-4 border border-stone-200">
+          <div className="bg-slate-50 rounded-xl p-4 border border-slate-200">
             <nav className="flex flex-col gap-1">
               {navLinks.map((link) => (
                 <button
                   key={link.id}
                   onClick={() => scrollToSection(link.id)}
-                  className="text-left px-4 py-3 text-stone-700 hover:bg-stone-50 rounded-lg transition-colors font-medium"
+                  className="text-left px-4 py-3 text-slate-700 hover:bg-white rounded-lg transition-colors font-medium"
                 >
                   {link.label}
                 </button>
               ))}
-              <div className="border-t border-stone-100 my-2" />
+              <div className="border-t border-slate-200 my-2" />
               <a 
-                href="tel:0412345678" 
-                className="flex items-center gap-2 px-4 py-3 text-stone-700 hover:bg-stone-50 rounded-lg transition-colors font-medium"
+                href={`tel:${siteInfo.phone.replace(/\s/g, '')}`}
+                className="flex items-center gap-2 px-4 py-3 text-slate-700 hover:bg-white rounded-lg font-medium"
               >
-                <Phone className="w-4 h-4" />
-                <span>0412 345 678</span>
+                <Phone className="w-4 h-4 text-sky-500" />
+                <span>{siteInfo.phone}</span>
               </a>
               <Button
                 onClick={() => scrollToSection('contact')}
-                className="mt-2 bg-[#D97756] hover:bg-[#C4684A] text-white"
+                className="mt-2 bg-sky-500 hover:bg-sky-600 text-white"
               >
-                Book Now
+                Book Your Lesson
               </Button>
             </nav>
           </div>
