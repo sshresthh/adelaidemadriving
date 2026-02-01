@@ -1,4 +1,4 @@
-/* Adelaide ma Driving - Clean Professional Styles */
+/* Adelaide ma Driving School - Bright Professional Styles */
 
 html {
   scroll-behavior: smooth;
@@ -7,7 +7,6 @@ html {
 .App {
   min-height: 100vh;
   overflow-x: hidden;
-  background-color: #FAFAF9;
 }
 
 /* Custom animations */
@@ -22,17 +21,22 @@ html {
   }
 }
 
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
 .animate-fade-in-up {
   animation: fadeInUp 0.6s ease-out forwards;
 }
 
-/* Smooth transitions for interactive elements */
-button,
-a,
-input,
-select,
-textarea {
-  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Smooth transitions */
+button, a, input, select, textarea {
+  transition: all 0.2s ease;
 }
 
 /* Focus states */
@@ -41,30 +45,30 @@ a:focus-visible,
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
-  outline: 2px solid #D97756;
+  outline: 2px solid #0EA5E9;
   outline-offset: 2px;
 }
 
-/* Selection color */
+/* Selection */
 ::selection {
-  background-color: #D97756;
+  background-color: #0EA5E9;
   color: white;
 }
 
-/* Clean scrollbar */
+/* Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #F5F5F4;
+  background: #F1F5F9;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #D6D3D1;
+  background: #CBD5E1;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #A8A29E;
+  background: #94A3B8;
 }

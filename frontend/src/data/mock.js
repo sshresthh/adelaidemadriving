@@ -1,32 +1,85 @@
-// Mock data for Adelaide ma Driving landing page
+// Comprehensive mock data for Adelaide ma Driving School
+
+export const siteInfo = {
+  name: "Adelaide ma Driving School",
+  tagline: "Your Path to Driving Confidence",
+  phone: "0412 345 678",
+  email: "hello@adelaidemadriving.com.au",
+  address: "Southern Adelaide, SA",
+  hours: "7 Days a Week, 7am - 7pm",
+  abn: "12 345 678 901",
+  licenseNumber: "SA-DI-2014-0892",
+  established: "2014",
+  socialLinks: {
+    facebook: "https://facebook.com/adelaidemadriving",
+    instagram: "https://instagram.com/adelaidemadriving",
+    google: "https://g.page/adelaidemadriving"
+  }
+};
+
+export const instructor = {
+  name: "Michael Anderson",
+  title: "Head Driving Instructor",
+  image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop",
+  bio: "G'day! I'm Michael, your local Adelaide driving instructor with over 10 years of experience helping nervous beginners become confident, safe drivers. Born and raised in Adelaide, I know every street, roundabout, and test route in Southern Adelaide.",
+  qualifications: [
+    "SA Government Accredited Instructor",
+    "Certificate IV in Transport & Logistics",
+    "First Aid Certified",
+    "Working with Children Check"
+  ],
+  specialties: [
+    "Nervous & anxious learners",
+    "Test preparation specialist",
+    "Automatic & manual vehicles",
+    "Refresher courses for returning drivers"
+  ]
+};
 
 export const testimonials = [
   {
     id: 1,
     name: "Sarah Mitchell",
+    age: 18,
     location: "Glenelg",
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop",
-    quote: "First time pass! The instructor knew every street corner in Glenelg. The mock test on Marion Road was exactly like my actual test. Can't recommend enough!",
+    quote: "I was so nervous about learning to drive, but Michael made me feel completely at ease from day one. His patient teaching style and local knowledge helped me pass my test on the first attempt!",
     rating: 5,
-    passedOn: "First attempt"
+    passedOn: "First attempt",
+    date: "December 2025"
   },
   {
     id: 2,
     name: "James Thompson",
+    age: 22,
     location: "Brighton",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop",
-    quote: "As someone who was terrified of driving, the patient approach made all the difference. Now I'm confidently driving to work every day. Life-changing!",
+    quote: "After failing my test twice with another instructor, I switched to Adelaide ma Driving. Michael identified my weak points immediately and within 5 lessons I passed with flying colours!",
     rating: 5,
-    passedOn: "First attempt"
+    passedOn: "First attempt with us",
+    date: "November 2025"
   },
   {
     id: 3,
     name: "Emily Chen",
+    age: 17,
     location: "Somerton Park",
     image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop",
-    quote: "The test package was worth every dollar. Practiced the exact routes, learned all the tricky roundabouts near Marion. Passed with zero faults!",
+    quote: "The test package was worth every dollar. We practiced the exact test routes, and Michael taught me all the tricky spots around Marion. I felt so prepared on test day - passed with zero faults!",
     rating: 5,
-    passedOn: "First attempt"
+    passedOn: "First attempt",
+    date: "October 2025"
+  },
+  {
+    id: 4,
+    name: "David Russo",
+    age: 35,
+    location: "Plympton",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop",
+    quote: "As an adult learner, I was embarrassed to be learning at 35. Michael was incredibly understanding and professional. No judgement, just quality instruction. Highly recommend!",
+    rating: 5,
+    passedOn: "First attempt",
+    date: "September 2025"
   }
 ];
 
@@ -34,38 +87,69 @@ export const services = [
   {
     id: 1,
     title: "Driving Lessons",
-    description: "Build rock-solid driving skills with personalised one-on-one lessons tailored to your pace, goals, and learning style.",
-    features: ["One-on-one expert instruction", "All skill levels from beginner to advanced", "Flexible scheduling that works for you", "Modern dual-control vehicle"]
+    subtitle: "Build Your Foundation",
+    description: "Comprehensive one-on-one driving lessons tailored to your skill level and learning pace. From complete beginners to those needing a refresher.",
+    longDescription: "Our driving lessons are designed to build your confidence and skills progressively. We start with the basics in quiet streets, then gradually introduce more challenging situations as you improve. Each lesson is customised to your specific needs and goals.",
+    features: [
+      "One-on-one personalised instruction",
+      "Modern dual-control vehicle",
+      "Flexible scheduling to suit you",
+      "Pick-up & drop-off included",
+      "Progress tracking & feedback",
+      "All skill levels welcome"
+    ],
+    idealFor: ["Complete beginners", "Learner permit holders", "Those wanting to build confidence", "Refresher courses"]
   },
   {
     id: 2,
     title: "Test Preparation",
-    description: "Master hazard perception and practical driving skills with our proven test prep program designed for first-time passes.",
-    features: ["Full mock driving tests", "Hazard perception mastery", "Actual test route practice", "Pre-test confidence coaching"]
+    subtitle: "Pass First Time",
+    description: "Intensive test preparation program designed to give you the best chance of passing your VORT driving test on the first attempt.",
+    longDescription: "Our test preparation program is specifically designed around the SA VORT (Vehicle On Road Test) requirements. We practice on actual test routes, cover all assessment criteria, and ensure you're completely prepared for test day.",
+    features: [
+      "Practice on actual test routes",
+      "Mock driving tests included",
+      "Hazard perception training",
+      "Manoeuvres & parking practice",
+      "Test day tips & strategies",
+      "Pre-test confidence session"
+    ],
+    idealFor: ["Those ready for their test", "Failed test previously", "Want guaranteed preparation", "Test anxiety sufferers"]
   }
 ];
 
 export const whyUsFeatures = [
   {
     id: 1,
-    title: "Glenelg Local Expert",
-    description: "10+ years mastering every street, roundabout, and test route in Southern Adelaide.",
+    title: "Local Expertise",
+    description: "10+ years mastering every street, roundabout, and test route in Glenelg, Marion, Plympton and surrounding suburbs.",
     stat: "500+",
-    statLabel: "Local Students"
+    statLabel: "Local Students",
+    details: "We know exactly where the examiners take students, the tricky intersections, and the common mistakes to avoid."
   },
   {
     id: 2,
-    title: "95% First-Time Pass",
-    description: "Our proven method gets results. Most students pass on their very first attempt.",
+    title: "High Pass Rate",
+    description: "Our proven teaching method and thorough preparation results in an exceptional first-time pass rate.",
     stat: "95%",
-    statLabel: "Pass Rate"
+    statLabel: "Pass Rate",
+    details: "Compared to the SA average of around 65%, our students are significantly more likely to pass first time."
   },
   {
     id: 3,
     title: "Flexible & Convenient",
-    description: "Pick-up from home, work, or school. 7 days a week. Your schedule, your choice.",
+    description: "We work around your schedule with pick-up from home, work, or school. 7 days a week availability.",
     stat: "7",
-    statLabel: "Days/Week"
+    statLabel: "Days/Week",
+    details: "Early morning, after school, weekends - we'll find a time that works for you."
+  },
+  {
+    id: 4,
+    title: "Patient Teaching",
+    description: "Calm, supportive instruction that builds confidence. Perfect for nervous or anxious learners.",
+    stat: "100%",
+    statLabel: "Supportive",
+    details: "No yelling, no stress. Just patient, professional instruction at your pace."
   }
 ];
 
@@ -73,134 +157,107 @@ export const pricing = [
   {
     id: 1,
     title: "Single Lesson",
-    price: "$100",
+    price: "100",
+    currency: "$",
     duration: "60 minutes",
     description: "Perfect for building skills at your own pace",
-    features: ["60-minute focused lesson", "Personalised skill building", "Flexible scheduling", "Pick-up & drop-off included", "Progress tracking"],
-    popular: false
+    features: [
+      "60-minute focused lesson",
+      "Personalised skill building",
+      "Flexible scheduling",
+      "Pick-up & drop-off included",
+      "Progress tracking",
+      "Lesson notes provided"
+    ],
+    popular: false,
+    buttonText: "Book Single Lesson"
   },
   {
     id: 2,
-    title: "Test Success Package",
-    price: "$450",
+    title: "5 Lesson Package",
+    price: "450",
+    currency: "$",
+    duration: "5 x 60 minutes",
+    description: "Great value for consistent learning",
+    features: [
+      "5 x 60-minute lessons",
+      "Save $50 vs single lessons",
+      "Flexible scheduling",
+      "Pick-up & drop-off included",
+      "Progress tracking",
+      "Priority booking"
+    ],
+    popular: false,
+    savings: "Save $50",
+    buttonText: "Book 5 Lessons"
+  },
+  {
+    id: 3,
+    title: "Test Ready Package",
+    price: "550",
+    currency: "$",
     duration: "5 lessons + mock test",
     description: "Complete preparation for first-time pass",
-    features: ["5 x 60-minute lessons", "Full mock driving test", "Real test route practice", "Hazard perception training", "Test day strategy session", "Priority booking"],
+    features: [
+      "5 x 60-minute lessons",
+      "Full mock driving test",
+      "Actual test route practice",
+      "Hazard perception training",
+      "Test day strategy session",
+      "Priority booking",
+      "Pass guarantee support"
+    ],
     popular: true,
-    savings: "Save $100"
+    savings: "Best Value",
+    buttonText: "Get Test Ready"
   }
 ];
 
-export const contactInfo = {
-  phone: "0412 345 678",
-  email: "lessons@adelaidemadriving.com.au",
-  areas: ["Glenelg", "Brighton", "Marion", "Plympton", "Somerton Park", "Holdfast Bay"]
-};
+export const serviceAreas = [
+  { name: "Glenelg", popular: true },
+  { name: "Brighton", popular: true },
+  { name: "Marion", popular: true },
+  { name: "Plympton", popular: true },
+  { name: "Somerton Park", popular: false },
+  { name: "Glenelg North", popular: false },
+  { name: "Glenelg South", popular: false },
+  { name: "Holdfast Bay", popular: false },
+  { name: "Morphettville", popular: false },
+  { name: "Camden Park", popular: false },
+  { name: "Novar Gardens", popular: false },
+  { name: "Warradale", popular: false }
+];
 
-// Sample 1-hour circular driving route in Plympton/Marion/Glenelg area
-export const drivingRoute = {
-  name: "Southern Adelaide Mastery Route",
-  duration: "60 minutes",
-  distance: "22 km",
-  description: "Master the most common test routes and challenging intersections",
-  waypoints: [
-    {
-      id: 1,
-      name: "Start: Plympton",
-      coords: [-34.9558, 138.5536],
-      type: "start",
-      description: "Residential start - basic maneuvers",
-      skills: ["Mirror checks", "Indicator use", "Speed control"]
-    },
-    {
-      id: 2,
-      name: "Marion Road South",
-      coords: [-34.9750, 138.5561],
-      type: "waypoint",
-      description: "Main road driving",
-      skills: ["Lane changes", "Traffic flow", "Speed limits"]
-    },
-    {
-      id: 3,
-      name: "Westfield Marion",
-      coords: [-34.9889, 138.5561],
-      type: "waypoint",
-      description: "Complex intersections & parking",
-      skills: ["Roundabouts", "Give way rules", "Parking"]
-    },
-    {
-      id: 4,
-      name: "Brighton Road",
-      coords: [-34.9920, 138.5250],
-      type: "waypoint",
-      description: "Coastal road driving",
-      skills: ["Merging", "Speed zones", "Pedestrians"]
-    },
-    {
-      id: 5,
-      name: "Glenelg Beach",
-      coords: [-34.9817, 138.5150],
-      type: "waypoint",
-      description: "Beachside practice",
-      skills: ["Parallel parking", "U-turns", "Observation"]
-    },
-    {
-      id: 6,
-      name: "Anzac Highway",
-      coords: [-34.9600, 138.5300],
-      type: "waypoint",
-      description: "Multi-lane highway",
-      skills: ["Highway merging", "Lane discipline", "Speed"]
-    },
-    {
-      id: 7,
-      name: "Return: Plympton",
-      coords: [-34.9558, 138.5536],
-      type: "end",
-      description: "Complete the loop",
-      skills: ["Final maneuvers", "Confidence check", "Debrief"]
-    }
-  ],
-  // Detailed route path following actual roads (for realistic Uber-like display)
-  routePath: [
-    // Start at Plympton
-    [-34.9558, 138.5536],
-    // Head south on Marion Road
-    [-34.9580, 138.5540],
-    [-34.9620, 138.5550],
-    [-34.9680, 138.5558],
-    [-34.9750, 138.5561],
-    // Continue to Westfield Marion
-    [-34.9800, 138.5561],
-    [-34.9850, 138.5561],
-    [-34.9889, 138.5561],
-    // Turn west on Sturt Road toward Brighton
-    [-34.9889, 138.5500],
-    [-34.9900, 138.5400],
-    [-34.9920, 138.5300],
-    [-34.9920, 138.5250],
-    // Head north on Brighton Road to Glenelg
-    [-34.9880, 138.5200],
-    [-34.9850, 138.5170],
-    [-34.9817, 138.5150],
-    // Along Glenelg esplanade
-    [-34.9780, 138.5140],
-    [-34.9740, 138.5145],
-    // Turn onto Anzac Highway heading east
-    [-34.9700, 138.5180],
-    [-34.9650, 138.5240],
-    [-34.9600, 138.5300],
-    // Continue on Anzac Highway
-    [-34.9580, 138.5380],
-    [-34.9570, 138.5450],
-    // Return to Plympton
-    [-34.9560, 138.5500],
-    [-34.9558, 138.5536]
-  ],
-  highlights: [
-    "Practice actual VORT test routes",
-    "Master 6 different roundabout types",
-    "Tackle peak hour traffic scenarios",
-    "Perfect parallel & angle parking"
-  ]
-};
+export const faqs = [
+  {
+    question: "How many lessons will I need before my test?",
+    answer: "This varies for each learner. On average, complete beginners need 20-30 hours of professional instruction plus practice with a supervising driver. We'll assess your skills and give you an honest estimate."
+  },
+  {
+    question: "Do you provide the car for the driving test?",
+    answer: "Yes! You can use our modern, dual-control vehicle for your driving test at no extra charge when you book a lesson for test day."
+  },
+  {
+    question: "What areas do you cover?",
+    answer: "We service all of Southern Adelaide including Glenelg, Brighton, Marion, Plympton, Somerton Park, and surrounding suburbs. Pick-up and drop-off is included in all lessons."
+  },
+  {
+    question: "Do you teach manual or automatic?",
+    answer: "We currently teach in an automatic vehicle. Learning in an automatic allows you to focus on road skills without worrying about gear changes. You can always learn manual later!"
+  },
+  {
+    question: "What if I need to cancel a lesson?",
+    answer: "We understand plans change. Please give us at least 24 hours notice to reschedule without charge. Late cancellations may incur a fee."
+  },
+  {
+    question: "I'm a nervous driver. Can you help?",
+    answer: "Absolutely! Many of our students start out nervous or anxious. Michael specialises in helping nervous learners build confidence with patient, supportive instruction. No pressure, no stress."
+  }
+];
+
+export const stats = [
+  { value: "500+", label: "Students Taught", description: "Happy learners on the road" },
+  { value: "95%", label: "First-Time Pass", description: "Above SA average of 65%" },
+  { value: "10+", label: "Years Experience", description: "Teaching in Adelaide" },
+  { value: "4.9★", label: "Google Rating", description: "From 200+ reviews" }
+];

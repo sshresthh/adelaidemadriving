@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 /* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
 body {
     margin: 0;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #FAFAF9;
+    background-color: #ffffff;
 }
 
 code {
@@ -19,26 +19,26 @@ code {
 
 @layer base {
   :root {
-        /* Sophisticated warm palette - NO GRADIENTS */
-        --background: 60 9% 98%;
-        --foreground: 20 14% 10%;
+        /* Bright, Professional Color Palette */
+        --background: 0 0% 100%;
+        --foreground: 222 47% 11%;
         --card: 0 0% 100%;
-        --card-foreground: 20 14% 10%;
+        --card-foreground: 222 47% 11%;
         --popover: 0 0% 100%;
-        --popover-foreground: 20 14% 10%;
-        --primary: 14 67% 55%;
+        --popover-foreground: 222 47% 11%;
+        --primary: 199 89% 48%;
         --primary-foreground: 0 0% 100%;
-        --secondary: 60 5% 96%;
-        --secondary-foreground: 20 14% 15%;
-        --muted: 60 5% 96%;
-        --muted-foreground: 25 5% 45%;
-        --accent: 14 67% 55%;
+        --secondary: 210 40% 96%;
+        --secondary-foreground: 222 47% 11%;
+        --muted: 210 40% 96%;
+        --muted-foreground: 215 16% 47%;
+        --accent: 199 89% 48%;
         --accent-foreground: 0 0% 100%;
         --destructive: 0 84% 60%;
         --destructive-foreground: 0 0% 98%;
-        --border: 20 6% 90%;
-        --input: 20 6% 90%;
-        --ring: 14 67% 55%;
+        --border: 214 32% 91%;
+        --input: 214 32% 91%;
+        --ring: 199 89% 48%;
         --radius: 0.5rem;
     }
 }
