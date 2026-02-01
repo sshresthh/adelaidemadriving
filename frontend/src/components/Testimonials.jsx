@@ -11,14 +11,14 @@ const Testimonials = () => {
     if (isAnimating) return;
     setIsAnimating(true);
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-    setTimeout(() => setIsAnimating(false), 500);
+    setTimeout(() => setIsAnimating(false), 400);
   }, [isAnimating]);
 
   const prevTestimonial = () => {
     if (isAnimating) return;
     setIsAnimating(true);
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-    setTimeout(() => setIsAnimating(false), 500);
+    setTimeout(() => setIsAnimating(false), 400);
   };
 
   useEffect(() => {
@@ -27,66 +27,59 @@ const Testimonials = () => {
   }, [nextTestimonial]);
 
   return (
-    <section className="py-24 md:py-32 bg-gradient-to-b from-slate-50 to-white relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-gradient-to-b from-orange-100/50 to-transparent rounded-full blur-3xl" />
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+    <section className="py-20 md:py-28 bg-white">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-100 rounded-full mb-6">
-            <Star className="w-4 h-4 text-orange-600 fill-orange-600" />
-            <span className="text-orange-700 text-sm font-semibold uppercase tracking-wider">Student Stories</span>
-          </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-800 mb-6">
-            What Our Students
-            <span className="block bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent">Say About Us</span>
+        <div className="text-center max-w-2xl mx-auto mb-14">
+          <span className="inline-block px-3 py-1 bg-[#D97756]/10 text-[#D97756] text-sm font-semibold rounded-full mb-4">
+            Testimonials
+          </span>
+          <h2 className="text-3xl md:text-4xl font-bold text-stone-900 mb-4">
+            What Our Students Say
           </h2>
         </div>
 
-        {/* Testimonial slider */}
-        <div className="relative max-w-4xl mx-auto">
-          <Card className="border-0 shadow-2xl bg-white overflow-visible rounded-3xl">
-            <CardContent className="p-8 md:p-12 relative">
-              {/* Large quote decoration */}
-              <div className="absolute -top-6 -left-4 md:left-8">
-                <div className="p-4 bg-gradient-to-br from-orange-500 to-amber-500 rounded-2xl shadow-lg shadow-orange-500/30">
-                  <Quote className="w-8 h-8 text-white" />
+        {/* Testimonial card */}
+        <div className="max-w-3xl mx-auto">
+          <Card className="border border-stone-200 shadow-sm">
+            <CardContent className="p-8 md:p-10">
+              {/* Quote icon */}
+              <div className="mb-6">
+                <div className="inline-flex p-3 bg-[#D97756] rounded-lg">
+                  <Quote className="w-6 h-6 text-white" />
                 </div>
               </div>
 
-              {/* Testimonial content */}
-              <div className={`transition-all duration-500 ${isAnimating ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'}`}>
-                <div className="pt-8 md:pt-4">
-                  {/* Stars */}
-                  <div className="flex gap-1 mb-6">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-6 h-6 fill-amber-400 text-amber-400" />
-                    ))}
-                  </div>
+              {/* Content */}
+              <div className={`transition-opacity duration-400 ${isAnimating ? 'opacity-0' : 'opacity-100'}`}>
+                {/* Stars */}
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-[#D97756] text-[#D97756]" />
+                  ))}
+                </div>
 
-                  {/* Quote */}
-                  <blockquote className="text-xl md:text-2xl text-slate-700 leading-relaxed mb-8 font-medium">
-                    "{testimonials[currentIndex].quote}"
-                  </blockquote>
+                {/* Quote */}
+                <blockquote className="text-xl md:text-2xl text-stone-700 leading-relaxed mb-8">
+                  "{testimonials[currentIndex].quote}"
+                </blockquote>
 
-                  {/* Author */}
-                  <div className="flex items-center gap-5">
-                    <img
-                      src={testimonials[currentIndex].image}
-                      alt={testimonials[currentIndex].name}
-                      className="w-16 h-16 rounded-full object-cover border-4 border-orange-100"
-                    />
-                    <div>
-                      <div className="font-bold text-slate-800 text-lg">
-                        {testimonials[currentIndex].name}
-                      </div>
-                      <div className="text-slate-500">
-                        {testimonials[currentIndex].location}
-                      </div>
-                      <div className="inline-flex items-center gap-1 mt-1 px-2 py-0.5 bg-emerald-100 text-emerald-700 text-xs font-medium rounded-full">
-                        ✓ Passed {testimonials[currentIndex].passedOn}
-                      </div>
+                {/* Author */}
+                <div className="flex items-center gap-4">
+                  <img
+                    src={testimonials[currentIndex].image}
+                    alt={testimonials[currentIndex].name}
+                    className="w-14 h-14 rounded-full object-cover"
+                  />
+                  <div>
+                    <div className="font-bold text-stone-900">
+                      {testimonials[currentIndex].name}
+                    </div>
+                    <div className="text-stone-500 text-sm">
+                      {testimonials[currentIndex].location}
+                    </div>
+                    <div className="inline-flex items-center gap-1 mt-1 px-2 py-0.5 bg-emerald-100 text-emerald-700 text-xs font-medium rounded-full">
+                      ✓ Passed {testimonials[currentIndex].passedOn}
                     </div>
                   </div>
                 </div>
@@ -98,25 +91,25 @@ const Testimonials = () => {
           <div className="flex justify-center items-center gap-4 mt-8">
             <button
               onClick={prevTestimonial}
-              className="w-12 h-12 rounded-full bg-white shadow-lg hover:shadow-xl flex items-center justify-center text-slate-600 hover:text-orange-600 hover:bg-orange-50 transition-all duration-300 border border-slate-100"
+              className="w-10 h-10 rounded-full bg-white border border-stone-200 flex items-center justify-center text-stone-600 hover:text-stone-900 hover:border-stone-300 transition-colors"
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
 
             {/* Dots */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2">
               {testimonials.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => {
                     setIsAnimating(true);
                     setCurrentIndex(index);
-                    setTimeout(() => setIsAnimating(false), 500);
+                    setTimeout(() => setIsAnimating(false), 400);
                   }}
                   className={`transition-all duration-300 rounded-full ${
                     index === currentIndex
-                      ? 'w-10 h-3 bg-gradient-to-r from-orange-500 to-amber-500'
-                      : 'w-3 h-3 bg-slate-200 hover:bg-slate-300'
+                      ? 'w-8 h-2 bg-[#D97756]'
+                      : 'w-2 h-2 bg-stone-300 hover:bg-stone-400'
                   }`}
                 />
               ))}
@@ -124,7 +117,7 @@ const Testimonials = () => {
 
             <button
               onClick={nextTestimonial}
-              className="w-12 h-12 rounded-full bg-white shadow-lg hover:shadow-xl flex items-center justify-center text-slate-600 hover:text-orange-600 hover:bg-orange-50 transition-all duration-300 border border-slate-100"
+              className="w-10 h-10 rounded-full bg-white border border-stone-200 flex items-center justify-center text-stone-600 hover:text-stone-900 hover:border-stone-300 transition-colors"
             >
               <ChevronRight className="w-5 h-5" />
             </button>
