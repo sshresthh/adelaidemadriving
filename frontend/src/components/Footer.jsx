@@ -14,61 +14,57 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-slate-950 text-white relative">
-      {/* Back to top button */}
-      <div className="absolute -top-6 left-1/2 -translate-x-1/2">
+    <footer className="bg-stone-950 text-white">
+      {/* Back to top */}
+      <div className="flex justify-center -mt-5">
         <button
           onClick={scrollToTop}
-          className="w-12 h-12 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full shadow-lg shadow-orange-500/30 flex items-center justify-center hover:scale-110 transition-transform"
+          className="w-10 h-10 bg-[#D97756] rounded-full shadow-lg flex items-center justify-center hover:bg-[#C4684A] transition-colors"
         >
-          <ChevronUp className="w-6 h-6 text-white" />
+          <ChevronUp className="w-5 h-5 text-white" />
         </button>
       </div>
 
       {/* Main footer */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-12">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-10">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
           {/* Brand column */}
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="p-2.5 bg-gradient-to-br from-orange-500 to-amber-500 rounded-xl">
-                <Car className="w-6 h-6 text-white" />
+            <div className="flex items-center gap-2 mb-4">
+              <div className="p-2 bg-stone-800 rounded-lg">
+                <Car className="w-5 h-5 text-[#D97756]" />
               </div>
-              <div>
-                <span className="text-xl font-bold">
-                  Adelaide<span className="text-orange-400">ma</span>
-                </span>
-                <span className="block text-[10px] uppercase tracking-widest text-slate-500">Driving School</span>
-              </div>
+              <span className="text-lg font-bold">
+                Adelaide<span className="text-[#D97756]">ma</span> Driving
+              </span>
             </div>
-            <p className="text-slate-400 mb-6 max-w-md leading-relaxed">
-              Your trusted local driving instructor in Southern Adelaide. Helping learners build confidence and achieve first-time passes since 2014. Fully accredited, patient approach, and flexible scheduling.
+            <p className="text-stone-400 mb-6 max-w-sm text-sm leading-relaxed">
+              Your trusted local driving instructor in Southern Adelaide. Helping learners build confidence and achieve first-time passes since 2014.
             </p>
-            <div className="flex gap-3">
+            <div className="flex gap-2">
               <a
                 href="#"
-                className="p-3 bg-slate-800 rounded-xl hover:bg-orange-500 transition-colors duration-300"
+                className="p-2 bg-stone-800 rounded-lg hover:bg-[#D97756] transition-colors"
                 aria-label="Facebook"
               >
-                <Facebook className="w-5 h-5" />
+                <Facebook className="w-4 h-4" />
               </a>
               <a
                 href="#"
-                className="p-3 bg-slate-800 rounded-xl hover:bg-orange-500 transition-colors duration-300"
+                className="p-2 bg-stone-800 rounded-lg hover:bg-[#D97756] transition-colors"
                 aria-label="Instagram"
               >
-                <Instagram className="w-5 h-5" />
+                <Instagram className="w-4 h-4" />
               </a>
             </div>
           </div>
 
           {/* Quick links */}
           <div>
-            <h4 className="text-lg font-bold mb-6 text-white">Quick Links</h4>
-            <ul className="space-y-4">
+            <h4 className="font-semibold mb-4">Quick Links</h4>
+            <ul className="space-y-3">
               {[
-                { label: 'About Us', id: 'about' },
-                { label: 'Sample Route', id: 'route' },
+                { label: 'About', id: 'about' },
                 { label: 'Services', id: 'services' },
                 { label: 'Pricing', id: 'pricing' },
                 { label: 'Book Now', id: 'contact' }
@@ -76,7 +72,7 @@ const Footer = () => {
                 <li key={link.id}>
                   <button
                     onClick={() => scrollToSection(link.id)}
-                    className="text-slate-400 hover:text-orange-400 transition-colors font-medium"
+                    className="text-stone-400 hover:text-[#D97756] transition-colors text-sm"
                   >
                     {link.label}
                   </button>
@@ -87,32 +83,30 @@ const Footer = () => {
 
           {/* Contact info */}
           <div>
-            <h4 className="text-lg font-bold mb-6 text-white">Contact Us</h4>
-            <ul className="space-y-4">
+            <h4 className="font-semibold mb-4">Contact</h4>
+            <ul className="space-y-3">
               <li>
                 <a
                   href={`tel:${contactInfo.phone.replace(/\s/g, '')}`}
-                  className="flex items-center gap-3 text-slate-400 hover:text-orange-400 transition-colors"
+                  className="flex items-center gap-2 text-stone-400 hover:text-[#D97756] transition-colors text-sm"
                 >
-                  <Phone className="w-5 h-5 text-orange-500" />
+                  <Phone className="w-4 h-4 text-[#D97756]" />
                   {contactInfo.phone}
                 </a>
               </li>
               <li>
                 <a
                   href={`mailto:${contactInfo.email}`}
-                  className="flex items-center gap-3 text-slate-400 hover:text-orange-400 transition-colors break-all"
+                  className="flex items-center gap-2 text-stone-400 hover:text-[#D97756] transition-colors text-sm break-all"
                 >
-                  <Mail className="w-5 h-5 text-orange-500" />
+                  <Mail className="w-4 h-4 text-[#D97756]" />
                   {contactInfo.email}
                 </a>
               </li>
               <li>
-                <div className="flex items-start gap-3 text-slate-400">
-                  <MapPin className="w-5 h-5 text-orange-500 flex-shrink-0 mt-0.5" />
-                  <span>
-                    Glenelg, Marion, Plympton & surrounds
-                  </span>
+                <div className="flex items-start gap-2 text-stone-400 text-sm">
+                  <MapPin className="w-4 h-4 text-[#D97756] mt-0.5" />
+                  <span>Glenelg, Marion, Plympton</span>
                 </div>
               </li>
             </ul>
@@ -120,16 +114,14 @@ const Footer = () => {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-slate-800 pt-8">
+        <div className="border-t border-stone-800 pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-slate-500 text-sm">
+            <p className="text-stone-500 text-sm">
               © {currentYear > 2025 ? currentYear : 2026} Adelaide ma Driving. All rights reserved.
             </p>
-            <div className="flex items-center gap-6 text-sm">
-              <span className="text-slate-500">ABN: 12 345 678 901</span>
-              <span className="text-slate-600">•</span>
-              <span className="text-slate-500">SA Accredited Instructor</span>
-            </div>
+            <p className="text-stone-600 text-sm">
+              SA Accredited Instructor
+            </p>
           </div>
         </div>
       </div>
