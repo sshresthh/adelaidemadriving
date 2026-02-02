@@ -17,7 +17,7 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (sectionId) => {
+  const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -25,7 +25,7 @@ const Header = () => {
     setIsMobileMenuOpen(false);
   };
 
-  const navLinks = [
+  const navLinks: Array<{ label: string; id: string }> = [
     { label: 'About', id: 'about' },
     { label: 'Services', id: 'services' },
     { label: 'Why Us', id: 'why-us' },

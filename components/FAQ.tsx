@@ -5,7 +5,7 @@ import { faqs } from '../data/mock';
 import { ChevronDown } from 'lucide-react';
 
 const FAQ = () => {
-  const [openIndex, setOpenIndex] = useState(0);
+  const [openIndex, setOpenIndex] = useState<number>(0);
 
   return (
     <section id="faq" className="py-24 md:py-32 bg-secondary">

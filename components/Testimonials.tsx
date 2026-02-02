@@ -6,8 +6,8 @@ import { testimonials } from '../data/mock';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const Testimonials = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const [isAnimating, setIsAnimating] = useState<boolean>(false);
 
   const nextTestimonial = useCallback(() => {
     if (isAnimating) return;

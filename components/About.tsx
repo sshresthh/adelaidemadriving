@@ -61,25 +61,6 @@ const About = () => {
 
           {/* Details */}
           <div className="lg:col-span-3 space-y-8">
-            {/* Specialties */}
-            <div>
-              <h4 className="text-lg font-bold text-foreground mb-4 flex items-center gap-2">
-                <span className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center">
-                  <svg className="w-4 h-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-                  </svg>
-                </span>
-                Areas of Expertise
-              </h4>
-              <div className="flex flex-wrap gap-2">
-                {instructor.specialties.map((specialty, index) => (
-                  <span key={index} className="px-4 py-2 bg-secondary text-foreground text-sm font-medium rounded-full border border-border">
-                    {specialty}
-                  </span>
-                ))}
-              </div>
-            </div>
-
             {/* Why learn with us */}
             <div>
               <h4 className="text-lg font-bold text-foreground mb-4 flex items-center gap-2">

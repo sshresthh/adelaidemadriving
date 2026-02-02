@@ -1,6 +1,91 @@
-// Comprehensive mock data for Adelaide ma Driving School
+// Comprehensive sample data for Adelaide ma Driving School
 
-export const siteInfo = {
+export type SiteInfo = {
+  name: string;
+  tagline: string;
+  phone: string;
+  email: string;
+  address: string;
+  hours: string;
+  abn: string;
+  licenseNumber: string;
+  established: string;
+  socialLinks: {
+    facebook: string;
+    instagram: string;
+    google: string;
+  };
+};
+
+export type Instructor = {
+  name: string;
+  title: string;
+  image: string;
+  bio: string;
+  specialties: string[];
+};
+
+export type Testimonial = {
+  id: number;
+  name: string;
+  age: number;
+  location: string;
+  image: string;
+  quote: string;
+  rating: number;
+  passedOn: string;
+  date: string;
+};
+
+export type Service = {
+  id: number;
+  title: string;
+  subtitle: string;
+  description: string;
+  longDescription: string;
+  features: string[];
+  idealFor: string[];
+};
+
+export type WhyUsFeature = {
+  id: number;
+  title: string;
+  description: string;
+  stat: string;
+  statLabel: string;
+  details: string;
+};
+
+export type PricingPlan = {
+  id: number;
+  title: string;
+  price: string;
+  currency: string;
+  duration: string;
+  description: string;
+  features: string[];
+  popular: boolean;
+  buttonText: string;
+  savings?: string;
+};
+
+export type ServiceArea = {
+  name: string;
+  popular: boolean;
+};
+
+export type FAQ = {
+  question: string;
+  answer: string;
+};
+
+export type StatItem = {
+  value: string;
+  label: string;
+  description: string;
+};
+
+export const siteInfo: SiteInfo = {
   name: "Adelaide ma Driving School",
   tagline: "Your Path to Driving Confidence",
   phone: "0412 345 678",
@@ -17,7 +102,7 @@ export const siteInfo = {
   }
 };
 
-export const instructor = {
+export const instructor: Instructor = {
   name: "Mr. Chhabilal Lamichhane",
   title: "Main Driving Instructor",
   image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop",
@@ -30,7 +115,7 @@ export const instructor = {
   ]
 };
 
-export const testimonials = [
+export const testimonials: Testimonial[] = [
   {
     id: 1,
     name: "Sarah Mitchell",
@@ -77,7 +162,7 @@ export const testimonials = [
   }
 ];
 
-export const services = [
+export const services: Service[] = [
   {
     id: 1,
     title: "Driving Lessons",
@@ -112,7 +197,7 @@ export const services = [
   }
 ];
 
-export const whyUsFeatures = [
+export const whyUsFeatures: WhyUsFeature[] = [
   {
     id: 1,
     title: "Local Expertise",
@@ -147,7 +232,7 @@ export const whyUsFeatures = [
   }
 ];
 
-export const pricing = [
+export const pricing: PricingPlan[] = [
   {
     id: 1,
     title: "Single Lesson",
@@ -190,11 +275,10 @@ export const pricing = [
     title: "Test Ready Package",
     price: "550",
     currency: "$",
-    duration: "5 lessons + mock test",
+    duration: "5 lessons + test prep",
     description: "Complete preparation for first-time pass",
     features: [
       "5 x 60-minute lessons",
-      "Full mock driving test",
       "Actual test route practice",
       "Hazard perception training",
       "Test day strategy session",
@@ -207,7 +291,7 @@ export const pricing = [
   }
 ];
 
-export const serviceAreas = [
+export const serviceAreas: ServiceArea[] = [
   { name: "Glenelg", popular: true },
   { name: "Brighton", popular: true },
   { name: "Marion", popular: true },
@@ -222,7 +306,7 @@ export const serviceAreas = [
   { name: "Warradale", popular: false }
 ];
 
-export const faqs = [
+export const faqs: FAQ[] = [
   {
     question: "How many lessons will I need before my test?",
     answer: "This varies for each learner. On average, complete beginners need 20-30 hours of professional instruction plus practice with a supervising driver. We'll assess your skills and give you an honest estimate."
@@ -245,11 +329,11 @@ export const faqs = [
   },
   {
     question: "I'm a nervous driver. Can you help?",
-    answer: "Absolutely! Many of our students start out nervous or anxious. Michael specialises in helping nervous learners build confidence with patient, supportive instruction. No pressure, no stress."
+    answer: "Absolutely! Many of our students start out nervous or anxious. Mr. Lamichhane specialises in helping nervous learners build confidence with patient, supportive instruction. No pressure, no stress."
   }
 ];
 
-export const stats = [
+export const stats: StatItem[] = [
   { value: "500+", label: "Students Taught", description: "Happy learners on the road" },
   { value: "95%", label: "First-Time Pass", description: "Above SA average of 65%" },
   { value: "10+", label: "Years Experience", description: "Teaching in Adelaide" },
