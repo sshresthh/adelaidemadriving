@@ -88,13 +88,13 @@ export type StatItem = {
 export const siteInfo: SiteInfo = {
   name: "Adelaide ma Driving School",
   tagline: "Your Path to Driving Confidence",
-  phone: "0412 345 678",
-  email: "hello@adelaidemadriving.com.au",
+  phone: "0425448259",
+  email: "info@adelaidedriving.com",
   address: "Southern Adelaide, SA",
-  hours: "7 Days a Week, 7am - 7pm",
+  hours: "Mon-Fri, 7am - 6 pm",
   abn: "12 345 678 901",
-  licenseNumber: "SA-DI-2014-0892",
-  established: "2014",
+  licenseNumber: "",
+  established: "2013",
   socialLinks: {
     facebook: "https://facebook.com/adelaidemadriving",
     instagram: "https://instagram.com/adelaidemadriving",
@@ -105,7 +105,7 @@ export const siteInfo: SiteInfo = {
 export const instructor: Instructor = {
   name: "Mr. Chhabilal Lamichhane",
   title: "Main Driving Instructor",
-  image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop",
+  image: "chhabi-dai-dp_l1j17l",
   bio: "Mr. Chhabilal Lamichhane is the main driving instructor at Adelaide MaDriving, known for calm, practical coaching that builds real confidence on the road.",
   specialties: [
     "Nervous & anxious learners",
@@ -115,52 +115,6 @@ export const instructor: Instructor = {
   ]
 };
 
-export const testimonials: Testimonial[] = [
-  {
-    id: 1,
-    name: "Sarah Mitchell",
-    age: 18,
-    location: "Glenelg",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop",
-    quote: "I was so nervous about learning to drive, but Mr. Lamichhane made me feel completely at ease from day one. His patient teaching style and local knowledge helped me pass my test on the first attempt!",
-    rating: 5,
-    passedOn: "First attempt",
-    date: "December 2025"
-  },
-  {
-    id: 2,
-    name: "James Thompson",
-    age: 22,
-    location: "Brighton",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop",
-    quote: "After failing my test twice with another instructor, I switched to Adelaide ma Driving. Mr. Lamichhane identified my weak points immediately and within 5 lessons I passed with flying colours!",
-    rating: 5,
-    passedOn: "First attempt with us",
-    date: "November 2025"
-  },
-  {
-    id: 3,
-    name: "Emily Chen",
-    age: 17,
-    location: "Somerton Park",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop",
-    quote: "The test package was worth every dollar. We practiced the exact test routes, and Mr. Lamichhane taught me all the tricky spots around Marion. I felt so prepared on test day - passed with zero faults!",
-    rating: 5,
-    passedOn: "First attempt",
-    date: "October 2025"
-  },
-  {
-    id: 4,
-    name: "David Russo",
-    age: 35,
-    location: "Plympton",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop",
-    quote: "As an adult learner, I was embarrassed to be learning at 35. Mr. Lamichhane was incredibly understanding and professional. No judgement, just quality instruction. Highly recommend!",
-    rating: 5,
-    passedOn: "First attempt",
-    date: "September 2025"
-  }
-];
 
 export const services: Service[] = [
   {

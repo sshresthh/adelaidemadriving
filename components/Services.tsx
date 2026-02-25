@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, type ReactNode } from 'react';
 import { Card, CardContent, CardHeader } from './ui/card';
 import { Button } from './ui/button';
 import { services } from '../data/mock';
@@ -13,7 +13,7 @@ const Services = () => {
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const serviceIcons: JSX.Element[] = [
+  const serviceIcons: ReactNode[] = [
     // Steering wheel icon
     <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <circle cx="12" cy="12" r="10"/>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type ChangeEvent, type FormEvent } from 'react';
+import { useState, type ChangeEvent, type FormEvent, type ReactNode } from 'react';
 import { Card, CardContent } from './ui/card';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
@@ -19,7 +19,7 @@ type FormData = {
 };
 
 type ContactItem = {
-  icon: JSX.Element;
+  icon: ReactNode;
   label: string;
   value: string;
   subtext: string;

@@ -1,9 +1,10 @@
 "use client";
 
+import type { ReactNode } from 'react';
 import { whyUsFeatures, stats } from '../data/mock';
 
 const WhyUs = () => {
-  const featureIcons: JSX.Element[] = [
+  const featureIcons: ReactNode[] = [
     // Location/Map icon
     <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
@@ -80,25 +81,6 @@ const WhyUs = () => {
               </p>
             </div>
           ))}
-        </div>
-
-        {/* Stats banner */}
-        <div className="bg-primary rounded-3xl p-8 md:p-12 shadow-[0_20px_45px_-22px_rgba(242,107,79,0.45)]">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-white mb-2">Our Track Record</h3>
-            <p className="text-white/90">Numbers that speak for themselves</p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-2xl">
-                <div className="text-3xl md:text-4xl font-extrabold text-white mb-1">
-                  {stat.value}
-                </div>
-                <div className="text-white/90 text-sm font-medium">{stat.label}</div>
-                <div className="text-white/70 text-xs mt-1">{stat.description}</div>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </section>

@@ -30,7 +30,6 @@ const Header = () => {
     { label: 'Services', id: 'services' },
     { label: 'Why Us', id: 'why-us' },
     { label: 'Pricing', id: 'pricing' },
-    { label: 'FAQ', id: 'faq' },
   ];
 
   return (
@@ -44,13 +43,12 @@ const Header = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div 
-            className="flex items-center gap-3 cursor-pointer group" 
+          <div
+            className="flex items-center gap-3 cursor-pointer group"
             onClick={() => scrollToSection('hero')}
           >
-            {/* Custom Logo Icon */}
             <div className={`relative w-11 h-11 rounded-xl flex items-center justify-center transition-all duration-300 ${
-              isScrolled ? 'bg-primary' : 'bg-white/70 backdrop-blur-sm ring-1 ring-primary/20'
+              isScrolled ? 'bg-primary' : 'bg-white/15 backdrop-blur-sm'
             }`}>
               <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="12" cy="12" r="10"/>
@@ -58,7 +56,9 @@ const Header = () => {
                 <path d="M16.24 7.76l1.42-1.42"/>
                 <path d="M18 12h2"/>
               </svg>
-              <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-accent rounded-full border-2 border-background flex items-center justify-center">
+              <div className={`absolute -bottom-1 -right-1 w-4 h-4 bg-accent rounded-full border-2 flex items-center justify-center ${
+                isScrolled ? 'border-background' : 'border-transparent'
+              }`}>
                 <svg className="w-2 h-2 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
                   <polyline points="20 6 9 17 4 12"/>
                 </svg>
@@ -66,12 +66,12 @@ const Header = () => {
             </div>
             <div className="flex flex-col">
               <span className={`text-lg font-bold tracking-tight leading-tight transition-colors duration-300 font-display ${
-                isScrolled ? 'text-foreground' : 'text-foreground'
+                isScrolled ? 'text-foreground' : 'text-white'
               }`}>
                 Adelaide ma Driving
               </span>
               <span className={`text-xs font-semibold tracking-wide transition-colors duration-300 ${
-                isScrolled ? 'text-primary' : 'text-primary'
+                isScrolled ? 'text-primary' : 'text-white/70'
               }`}>
                 DRIVING SCHOOL
               </span>
@@ -85,9 +85,9 @@ const Header = () => {
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
                 className={`px-4 py-2 text-sm font-medium rounded-full transition-all duration-300 ${
-                  isScrolled 
-                    ? 'text-foreground/70 hover:text-primary hover:bg-primary/10' 
-                    : 'text-foreground/70 hover:text-primary hover:bg-primary/10'
+                  isScrolled
+                    ? 'text-foreground/70 hover:text-primary hover:bg-primary/10'
+                    : 'text-white/70 hover:text-white hover:bg-white/10'
                 }`}
               >
                 {link.label}
@@ -97,31 +97,31 @@ const Header = () => {
 
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center gap-4">
-            <a 
+            <a
               href={`tel:${siteInfo.phone.replace(/\s/g, '')}`}
               className={`flex items-center gap-2 text-sm font-medium transition-all ${
-                isScrolled ? 'text-foreground/70 hover:text-primary' : 'text-foreground/70 hover:text-primary'
+                isScrolled ? 'text-foreground/70 hover:text-primary' : 'text-white/70 hover:text-white'
               }`}
             >
               <div className={`p-1.5 rounded-full ${
-                isScrolled ? 'bg-primary/10' : 'bg-primary/10'
+                isScrolled ? 'bg-primary/10' : 'bg-white/15'
               }`}>
-                <Phone className={`w-3.5 h-3.5 ${isScrolled ? 'text-primary' : 'text-primary'}`} />
+                <Phone className={`w-3.5 h-3.5 ${isScrolled ? 'text-primary' : 'text-white'}`} />
               </div>
               <span>{siteInfo.phone}</span>
             </a>
             <Button
-              onClick={() => scrollToSection('contact')}
+              onClick={() => scrollToSection('pricing')}
               className="bg-primary hover:bg-[#ec5f43] text-white px-6 py-2.5 text-sm font-semibold rounded-full shadow-[0_16px_30px_-18px_rgba(242,107,79,0.6)] hover:shadow-[0_18px_36px_-18px_rgba(242,107,79,0.7)] hover:-translate-y-0.5 transition-all"
             >
-              Book Lesson
+              View Pricing
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
             className={`lg:hidden p-2.5 rounded-xl transition-colors ${
-              isScrolled ? 'text-foreground hover:bg-secondary' : 'text-foreground hover:bg-secondary'
+              isScrolled ? 'text-foreground hover:bg-secondary' : 'text-white hover:bg-white/10'
             }`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
@@ -145,7 +145,7 @@ const Header = () => {
                 </button>
               ))}
               <div className="border-t border-border my-3" />
-              <a 
+              <a
                 href={`tel:${siteInfo.phone.replace(/\s/g, '')}`}
                 className="flex items-center gap-3 px-4 py-3 text-foreground hover:bg-secondary rounded-xl font-medium"
               >
@@ -155,10 +155,10 @@ const Header = () => {
                 <span>{siteInfo.phone}</span>
               </a>
               <Button
-                onClick={() => scrollToSection('contact')}
+                onClick={() => scrollToSection('pricing')}
                 className="mt-3 bg-primary hover:bg-[#ec5f43] text-white rounded-xl py-3 font-semibold"
               >
-                Book Your Lesson
+                View Pricing
               </Button>
             </nav>
           </div>

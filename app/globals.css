@@ -21,6 +21,8 @@
   --input: 30 46.7% 82.4%;
   --ring: 10.3 86.2% 62.9%;
   --radius: 0.9rem;
+  --font-fraunces: "Georgia", "Times New Roman", serif;
+  --font-spline-sans: "Trebuchet MS", "Helvetica Neue", Arial, sans-serif;
 }
 
 @theme {
@@ -78,6 +80,22 @@
 @layer utilities {
   .font-display {
     font-family: var(--font-fraunces), serif;
+  }
+}
+
+/* Marquee animations for hero photo wall */
+@keyframes marquee-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .will-change-transform {
+    animation: none !important;
   }
 }
 
